@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "31cf302a-3c43-4365-b600-bd04a79913ce"
+        },
+        "resourceGroupName": {
+            "value": "dpJsAppResourceGroup"
+        },
+        "name": {
+            "value": "dpJsApp"
+        },
+        "location": {
+            "value": "North Europe"
+        },
+        "hostingPlanName": {
+            "value": "ASP-dpJsAppResourceGroup-9a34"
+        },
+        "serverFarmResourceGroup": {
+            "value": "dpjsappresourcegroup"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "ftpsState": {
+            "value": "FtpsOnly"
+        },
+        "linuxFxVersion": {
+            "value": "NODE|20-lts"
+        }
+    }
+}
