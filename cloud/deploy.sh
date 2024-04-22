@@ -20,3 +20,15 @@ az deployment group create \
   --resource-group dpJsAppResourceGroup \
   --template-file $templateFile \
   --parameters $devParameterFile
+
+
+# add local repo to the azure
+az webapp deployment source config-local-git --name dpJsApp --resource-group dpJsAppResourceGroup
+
+git remote add azure https://dpjsapp.scm.azurewebsites.net/dpjsapp.git
+
+# git pwd, user can be found in the app service > dpJsApp
+git push azure main:master
+
+# stop the webapp
+az webapp stop --resource-group dpJsAppResourceGroup --name dpJsApp
